@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +31,9 @@
     </section>
 
     <section class="login-logout-forms">
-        <div>
+        <?php
+        if(!isset($_SESSION['user_id'])){
+            echo '<div>
             <div>
                 <form action="includes/login.inc.php" method="post">
                 <input type="text" name="username" placeholder="Username" class="form-control">
@@ -39,14 +47,17 @@
                 <a href="signup.php">
                 <button name="register" class="form-control">Register</button>
                 </a>
-        </div>
-
-        <div>
+        </div>';
+            
+        } else {
+            echo '<div>
             <form action="includes/logout.inc.php" method="post">
                 <input type="text" name="check" value="" style="display:none;">
                 <input type="submit" name="logout-submit" value="Log Out" class="form-control">
             </form>
-        </div>
+        </div>';
+        }
+        ?>
     </section>
 </header>
     

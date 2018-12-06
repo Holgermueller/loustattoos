@@ -2,6 +2,21 @@
 <?php include "templates/header.php"; ?>
 
 <main>
+    <h1>Register</h1>
+
+    <?php
+    if(isset($_GET['error'])){
+        if($_GET['error'] == "emptyfields"){
+            echo '<p>Fill in all of the fields!</p>';
+        }elseif($_GET['error'] == "emptyfields"){
+            echo '<p>Fill in all of the fields!</p>';
+        }
+    }elseif($_GET["signup"] == "success"){
+        echo '<p>Signup successful!!</p>';
+    }
+
+    ?>
+
     <form action="includes/signup.inc.php" method="post" class="registration">
         <input type="text" name="firstname" id="firstName" placeholder="First Name" class="form-control">
         <input type="text" name="lastname" id="lasstName" placeholder="Last Name" class="form-control">
