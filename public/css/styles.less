@@ -1,7 +1,11 @@
 // Palette
-@primary-border-color: #e6ac00;
-@primary-background-color: #ffff80;
+@primary-border-color: #d3d3d3;
+@primary-background-color: #808080;
 @hover: #3399ff;
+
+// Fonts
+
+// Global
 
 // Footer
 .footer {
@@ -12,5 +16,31 @@
     text-align: center;
     position: fixed;
     padding: 1% 0;
+    background-image: linear-gradient(@primary-border-color, @primary-background-color);
+}
+
+// Header
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: inline-flex;
     background-image: linear-gradient(@primary-background-color, @primary-border-color);
+}
+
+.brand {
+    margin-left: 2%;
+}
+
+.login-logout-forms{
+    margin: 2% 0 0 53%;
+}
+
+.login-register {
+    display: inline-flex;
+}
+
+.register-button {
+    padding-left: 1px;
 }

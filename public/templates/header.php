@@ -33,8 +33,8 @@ session_start();
     <section class="login-logout-forms">
         <?php
         if(!isset($_SESSION['user_id'])){
-            echo '<div>
-            <div>
+            echo '<div class="login-register">
+                <div>
                 <form action="includes/login.inc.php" method="post">
                 <input type="text" name="username" placeholder="Username" class="form-control">
                 <input type="password" name="userpassword" placeholder="Password" class="form-control">
@@ -43,10 +43,11 @@ session_start();
                 </form>
             </div>
 
-            
+            <div class="register-button">
                 <a href="signup.php">
                 <button name="register" class="form-control">Register</button>
                 </a>
+        </div>
         </div>';
             
         } else {
