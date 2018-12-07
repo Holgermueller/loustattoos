@@ -7,6 +7,11 @@
 // Fonts
 
 // Global
+html, body {
+    height: 100%;
+    overflow: scroll;
+}
+
 a,
 a:hover,
 a:visited {
@@ -33,13 +38,14 @@ input[type=submit] {
     left: 0;
     margin-bottom: 0;
     text-align: center;
-    position: fixed;
+    position: absolute;
     padding: 1% 0;
     background-image: linear-gradient(@primary-background-color, @primary-border-color);
 }
 
 // Header
 .header {
+    z-index: 1;
     width: 100%;
     top: 0;
     left: 0;
@@ -98,12 +104,16 @@ input[type=submit] {
 .profile{
     width: 40%;
     text-align: center;
-    margin: 15% 0 0 10%;
+    margin: 10% 0 0 10%;
     padding: 4px;
     border-radius: 15px;
     border: 1px solid @secondary-border-color;
     background-color: @primary-background-color;
     position: absolute;
+}
+
+.profile-photo {
+    font-size: 9em;
 }
 
 .delete,
@@ -120,7 +130,7 @@ input[type=submit] {
     background-color: red;
 }
 
-.booklist {
+.book-list {
     width: 31%;
     text-align: center;
     float: right;
@@ -129,4 +139,25 @@ input[type=submit] {
     border-radius: 15px;
     border: 1px solid @secondary-border-color;
     background-color: @primary-background-color;
+}
+
+// Delete account
+.choices-display {
+    padding: 4px;
+}
+
+.delete-form {
+    border-bottom: 1px solid @secondary-border-color;
+}
+
+.yes-delete:hover {
+    background-color: red;
+}
+
+.no-delete {
+    .register;
+}
+
+.no-delete:hover {
+    background-color: @hover;
 }
