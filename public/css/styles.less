@@ -1,11 +1,30 @@
 // Palette
-@primary-border-color: #d3d3d3;
-@primary-background-color: #808080;
+@primary-border-color: #808080;
+@primary-background-color: #d3d3d3;
+@secondary-border-color: #00ffff;
 @hover: #3399ff;
 
 // Fonts
 
 // Global
+a,
+a:hover,
+a:visited {
+    color: @hover;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=submit] {
+    border-radius: 15px;
+    margin: 0 2px 0 2px;
+}
+
+.form-control {
+    margin-bottom: 4px !important;
+    padding: 8px;
+}
 
 // Footer
 .footer {
@@ -16,7 +35,7 @@
     text-align: center;
     position: fixed;
     padding: 1% 0;
-    background-image: linear-gradient(@primary-border-color, @primary-background-color);
+    background-image: linear-gradient(@primary-background-color, @primary-border-color);
 }
 
 // Header
@@ -26,7 +45,7 @@
     left: 0;
     position: fixed;
     display: inline-flex;
-    background-image: linear-gradient(@primary-background-color, @primary-border-color);
+    background-image: linear-gradient(@primary-border-color, @primary-background-color);
 }
 
 .brand {
@@ -34,7 +53,7 @@
 }
 
 .login-logout-forms{
-    margin: 2% 0 0 53%;
+    margin: 2% 0 0 50%;
 }
 
 .login-register {
@@ -43,4 +62,71 @@
 
 .register-button {
     padding-left: 1px;
+}
+
+.register {
+    border-radius: 15px;
+    margin: 0 2px 0 2px;
+}
+
+.login:hover,
+.register:hover {
+    background-color: @hover;
+}
+
+// Index page
+.main {
+    width: 40%;
+    text-align: center;
+    margin: 15% 0 0 30%;
+    padding: 4px;
+    border-radius: 15px;
+    border: 1px solid @secondary-border-color;
+    background-color: @primary-background-color;
+}
+
+// Sign up page
+.registration {
+    display: inline-grid;
+}
+
+.join:hover {
+    background-color: @hover;
+}
+
+// Profile page
+.profile{
+    width: 40%;
+    text-align: center;
+    margin: 15% 0 0 10%;
+    padding: 4px;
+    border-radius: 15px;
+    border: 1px solid @secondary-border-color;
+    background-color: @primary-background-color;
+    position: absolute;
+}
+
+.delete,
+.editacct {
+    border-radius: 15px;
+    margin: 0 2px 0 2px;
+}
+
+.editacct:hover {
+    background-color: @hover;
+}
+
+.delete:hover {
+    background-color: red;
+}
+
+.booklist {
+    width: 31%;
+    text-align: center;
+    float: right;
+    padding: 4px;
+    margin: 15% 12% 0 0;
+    border-radius: 15px;
+    border: 1px solid @secondary-border-color;
+    background-color: @primary-background-color;
 }

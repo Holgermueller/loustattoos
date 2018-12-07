@@ -29,6 +29,7 @@ if(isset($_POST['login-submit'])) {
                     session_start();
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
+                    $_SESSION['firstname'] = $row['firstname'];
 
                     header("Location: ../profile.php?login=success");
                     exit();

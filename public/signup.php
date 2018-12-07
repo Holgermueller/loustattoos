@@ -1,7 +1,7 @@
 
 <?php include "templates/header.php"; ?>
 
-<main>
+<main class="main">
     <h1>Register</h1>
 
     <?php
@@ -25,7 +25,7 @@
         <input type="password" name="userpassword" id="userpassword" placeholder="Password" class="form-control">
         <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" class="form-control">
         <input type="text" name="check" value="" style="display:none;">
-        <input type="submit" name="join-submit" value="Join!" class="form-control">
+        <input type="submit" name="join-submit" value="Join!" class="join form-control">
     </form>
 </main>
 

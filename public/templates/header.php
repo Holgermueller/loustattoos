@@ -22,7 +22,7 @@ session_start();
 
 <header class="header">
     <section class="brand welcome-header">
-        <a href="">
+        <a href="../index.php">
         <h1 class="app-name header-elem">
         <i class="fas fa-book"></i>
             Read It!
@@ -39,13 +39,13 @@ session_start();
                 <input type="text" name="username" placeholder="Username" class="form-control">
                 <input type="password" name="userpassword" placeholder="Password" class="form-control">
                 <input type="text" name="check" value="" style="display:none;">
-                <input type="submit" name="login-submit" value="Log In" class="form-control">
+                <input type="submit" name="login-submit" value="Log In" class="login form-control">
                 </form>
             </div>
-
+            
             <div class="register-button">
                 <a href="signup.php">
-                <button name="register" class="form-control">Register</button>
+                <button name="register" class="register form-control">Register</button>
                 </a>
         </div>
         </div>';
