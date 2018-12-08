@@ -54,7 +54,7 @@ session_start();
             echo '<div>
             <form action="includes/logout.inc.php" method="post">
                 <input type="text" name="check" value="" style="display:none;">
-                <input type="submit" name="logout-submit" value="Log Out" class="form-control">
+                <input type="submit" name="logout-submit" value="Log Out" class="logout form-control">
             </form>
         </div>';
         }

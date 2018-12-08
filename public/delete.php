@@ -6,8 +6,8 @@
 
     <div class="choices">
         <div class="choices-display">
-            <form action="" class="delete-form">
-                <input type="submit" class="yes-delete form-control" value="Yes">
+            <form action="includes/delete.inc.php" class="delete-form" method="post">
+                <input type="submit" name="deleteSubmit" class="yes-delete form-control" value="Yes">
             </form>
         </div>
 
