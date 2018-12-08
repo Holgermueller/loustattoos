@@ -19,10 +19,17 @@
 
         ?>
 
+        <?php
+        $mysqltimestamp = $_SESSION['datejoined'];
+
+        $datejoined = date("m-d-Y");
+
+        ?>
+
             <div class="bio">
                 <h4>About me:</h4>
                 <h5>Location:</h5>
-                <h5>Active since: <?php echo " " . $_SESSION['datejoined'];?></h5>
+                <h5>Active since: <?php echo " " . $datejoined;?></h5>
                 <h4>Bio: </h4>
                 <p>bio info</p>
             </div>
