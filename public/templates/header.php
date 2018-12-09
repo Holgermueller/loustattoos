@@ -1,9 +1,3 @@
-<?php
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +30,7 @@ session_start();
             echo '<div class="login-register">
                 <div>
                 <form action="includes/login.inc.php" method="post">
+                <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>
                 <input type="text" name="username" placeholder="Username" class="form-control">
                 <input type="password" name="userpassword" placeholder="Password" class="form-control">
                 <input type="text" name="check" value="" style="display:none;">
