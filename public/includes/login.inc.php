@@ -3,6 +3,7 @@
 if(isset($_POST['login-submit'])) {
 
     require "dbh.inc.php";
+    require "common.inc.php";
 
     $username = $_POST['username'];
     $userpassword = $_POST['userpassword'];
@@ -32,6 +33,8 @@ if(isset($_POST['login-submit'])) {
                     $_SESSION['firstname'] = $row['firstname'];
                     $_SESSION['lastname'] = $row['lastname'];
                     $_SESSION['datejoined'] = $row['datejoined'];
+                    $_SESSION['location'] = $row['location'];
+                    $_SESSION['bio'] = $row['bio'];
 
                     header("Location: ../profile.php?login=success");
                     exit();

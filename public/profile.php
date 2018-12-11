@@ -10,7 +10,6 @@
             </div>
 
         <?php
-
         if(isset($_SESSION['user_id'])){
             echo'Welcome, '. $_SESSION['firstname'] . " " . $_SESSION['lastname'];
         } else {
@@ -19,19 +18,27 @@
 
         ?>
 
-        <?php
-        $mysqltimestamp = $_SESSION['datejoined'];
-
-        $datejoined = date("m-d-Y");
-
-        ?>
-
             <div class="bio">
                 <h4>About me:</h4>
                 <h5>Location:</h5>
-                <h5>Active since: <?php echo " " . $datejoined;?></h5>
-                <h4>Bio: </h4>
-                <p>bio info</p>
+                <h5>Active since: <?php
+                $mysqltimestamp = $_SESSION['datejoined'];
+                $datejoined = date("m-d-Y");
+                echo " " . $datejoined;
+                ?></h5>
+
+                <?php 
+                $bio = $_SESSION['bio'];
+                if(empty($bio)) {
+                    echo '<h4>Bio: </h4>';
+                    echo '<p>Tell us about yourself!</p>';
+                } else {
+                    echo '<h4>Bio: </bio>';
+                    echo $bio;
+                }
+
+                ?>
+                
             </div>
 
             <div class="update-links">
@@ -57,8 +64,6 @@
             </div>
         </section>
 
-
-        
     </main>
 
 <?php include "templates/footer.php"; ?>
