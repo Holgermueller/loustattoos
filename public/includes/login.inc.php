@@ -34,7 +34,7 @@ if(isset($_POST['login-submit'])) {
                     $_SESSION['lastname'] = $row['lastname'];
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['datejoined'] = $row['datejoined'];
-                    $_SESSION['location'] = $row['location'];
+                    $_SESSION['userlocation'] = $row['userlocation'];
                     $_SESSION['bio'] = $row['bio'];
 
                     header("Location: ../profile.php?login=success");

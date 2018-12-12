@@ -3,6 +3,10 @@
     <main>
 
         <section class="profile">
+            <?php if($_GET['updatesuccess'] == 'success') {
+                echo '<p class="success">Update successful!</p>';
+            };?>
+        
         <h2>Welcome, <?php  echo $_SESSION['firstname'];?></h2>
 
             <div class="profile-photo">
@@ -20,7 +24,12 @@
 
             <div class="bio">
                 <h4>About me:</h4>
-                <h5>Location:</h5>
+                <h5>Location:
+                    <?php
+
+                        echo $_SESSION['userlocation'];
+                    ?>
+                </h5>
                 <h5>Active since: <?php
                 $mysqltimestamp = $_SESSION['datejoined'];
                 $datejoined = date("m-d-Y");

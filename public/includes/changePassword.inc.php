@@ -23,7 +23,7 @@ if(isset($_POST['change-password-submit'])){
     } else {
         $newHashedPwd = password_hash($newpwd, PASSWORD_BCRYPT);
 
-        $sql = "UPDATE users SET userpassword=$newHashedPwd WHERE id=$userid";
+        $sql = "UPDATE users SET userpassword='$newHashedPwd' WHERE id=$userid";
     
         if (mysqli_query($connection, $sql)) {
             header("Location: ../changePassword.php?passwordChanged=success");
@@ -33,9 +33,8 @@ if(isset($_POST['change-password-submit'])){
             exit();
         }
     }
-    
+    mysqli_stmt_close($stmt);
     mysqli_close($connection);
-
 } else {
     header("Location: ../changePassword.php");
     exit();

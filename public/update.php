@@ -13,7 +13,7 @@ require 'includes/common.inc.php';
     <input type="text" name="newusername" class="form-control" value="<?php echo $_SESSION['username']?>">
     <input type="email" name="newemail" class="form-control" value="<?php echo $_SESSION['email']?>">
     <input type="text" name="newlocation" class="form-control" value="<?php
-                                                                        $locationDisplay = $_SESSION['location'];
+                                                                        $locationDisplay = $_SESSION['userlocation'];
                                                                         if(empty($locationDisplay)){
                                                                             echo 'enter location';
                                                                         } else {

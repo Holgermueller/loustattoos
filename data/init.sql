@@ -12,7 +12,7 @@ CREATE TABLE users (
     activation_code VARCHAR(255),
     userpassword VARCHAR(255) NOT NULL,
     active BOOLEAN DEFAULT false,
-    location VARCHAR(50),
+    userlocation VARCHAR(50),
     bio TEXT,
     datejoined datetime DEFAULT CURRENT_TIMESTAMP
 );

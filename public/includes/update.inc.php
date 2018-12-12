@@ -14,24 +14,19 @@ if(isset($_POST['update-form-submit'])){
     $bioinfo = $_POST['newbio'];
 
                 $sql = "UPDATE users SET 
-                            firstname = ?,
-                            lastname = ?,
-                            username = ?,
-                            email = ?,
-                            location = ?,
-                            bio = 
-                WHERE id = $userid";
-                $stmt = mysqli_stmt_init($connection);
-                if(!mysqli_stmt_prepare($stmt, $sql)){
-                header("Location: ../update.php?error=sqlerror");
-                exit();
-                } else {
-                    mysqli_stmt_bind_param($stmt, "ssssss", $firstname, $lastname, $username, $email, $location, $bioinfo);
-                    mysqli_stmt_execute($stmt);
-                    header("Location: ../update.php?signup=success");
+                        firstname='$firstname',
+                        lastname='$lastname',
+                        username='$username',
+                        email='$email',
+                        userlocation='$location',
+                        bio='$bioinfo'
+                        WHERE id='$userid'";
+                if (mysqli_query($connection, $sql)) {
+                    header("Location: ../profile.php?updatesuccess=success");
                     exit();
+                } else {
+                    echo "Error updating record: " . mysqli_error($connection);
                 }
-    mysqli_stmt_close($stmt);
     mysqli_close($connection);
 } else {
     header("Location: ../update.php");
