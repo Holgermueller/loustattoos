@@ -10,8 +10,11 @@ if(isset($_POST['change-password-submit'])){
     $newpwd = $_POST['newPassword'];
     $confirmnewpwd = $_POST['confirmNewPassword'];
 
-    if($newpwd !== $confirmnewpwd) {
-        header("Location: ../changePassword.php?error=passwordCheck");
+    if(empty($oldpwd) || empty($newpwd) || empty($confirmnewpwd)){
+        header("Location: ../changePassword.php?error=emptyFields");
+        exit();
+    } elseif($newpwd !== $confirmnewpwd) {
+        header("Location: ../changePassword.php?error=passwordcheck");
         exit();
     }
 

@@ -4,18 +4,17 @@
     <h2>Hello, <?echo $_SESSION['username'];?></h2>
 <h2>Change your password.</h2>
 
-    <h2 class="error">
     <?php
     if(isset($_GET['error'])){
-        if($_GET['error'] == 'passwordcheck') {
-            echo '<p>Your passwords must match!</p>';
+        if($_GET['error'] == 'emptyFields') {
+            echo '<p class="error">You must fill out all fields!</p>';
+        } elseif($_SESSION['error'] == 'passwordcheck') {
+            echo '<p class="error">Your passwords must match!</p>';
         } 
-    }elseif($_GET["signup"] == "success"){
-        echo '<p>Signup successful!!</p>';
+    } elseif($_SESSION["passwordChanged"] == "success"){
+        echo '<p>Password change successful!!</p>';
     }
-
     ?>
-    </h2>
 
 <form action="includes/changePassword.inc.php" method="post" class="change-password-form">
     <input type="password" name="oldPassword" class="form-control" placeholder="Current Password">
