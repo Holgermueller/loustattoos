@@ -12,6 +12,8 @@ if(isset($_POST['deleteSubmit'])) {
     $userid = $_SESSION['user_id'];
     $sql = "DELETE FROM users WHERE id = $userid";
     if(mysqli_query($connection, $sql)) {
+        session_unset();
+        session_destroy();
         header("Location: ../goodbye.php?delete=success");
         exit();
     } else {

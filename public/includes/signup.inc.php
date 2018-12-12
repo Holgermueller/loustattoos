@@ -65,7 +65,6 @@ if(isset($_POST['join-submit'])){
                     exit();
                 }
             }
-
         }
     } mysqli_stmt_close($stmt);
         mysqli_close($connection);

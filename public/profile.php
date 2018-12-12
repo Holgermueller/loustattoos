@@ -42,7 +42,7 @@
             </div>
 
             <div class="update-links">
-                <a href="update.php"><button class="editacct">Edit Acct</button></a>
+                <a href="update.php"><button name="update" class="editacct">Edit Acct</button></a>
                 <a href="delete.php"><button class="delete">Delete Acct</button></a>
             </div>
 
