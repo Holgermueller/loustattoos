@@ -18,6 +18,24 @@ if(isset($_POST['change-password-submit'])){
         exit();
     }
 
+    if (!$connection) {
+        die("Connection failed: " . mysqli_connect_error());
+    } else {
+        $newHashedPwd = password_hash($newpwd, PASSWORD_BCRYPT);
+
+        $sql = "UPDATE users SET userpassword=$newHashedPwd WHERE id=$userid";
+    
+        if (mysqli_query($connection, $sql)) {
+            header("Location: ../changePassword.php?passwordChanged=success");
+            exit();
+        } else {
+            echo "Error updating record: " . mysqli_error($connection);
+            exit();
+        }
+    }
+    
+    mysqli_close($connection);
+
 } else {
     header("Location: ../changePassword.php");
     exit();
