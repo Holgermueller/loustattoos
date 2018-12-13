@@ -15,8 +15,6 @@
             <a href="profile.php"><button class="no-delete form-control">No</button></a>
         </div>
     </div>
-
-
 </main>
 
 <?php include "templates/footer.php"; ?>

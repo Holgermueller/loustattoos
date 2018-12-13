@@ -19,13 +19,13 @@ require 'includes/common.inc.php';
                                                                         } else {
                                                                             echo $locationDisplay;
                                                                         }?>">
-    <textarea name="newbio" id="" cols="30" rows="10" value="<?php
-                                                            $bioInfo = $_SESSION['bio'];
-                                                            if(empty($bioInfo)){
-                                                                echo 'Enter bio';
-                                                            } else {
-                                                                echo $bioInfo;
-                                                            }?>" class="form-control"></textarea>
+    <input type="text" name="newbio" id=""  value="<?php
+                                                    $bioInfo = $_SESSION['bio'];
+                                                    if(empty($bioInfo)){
+                                                        echo 'Enter bio';
+                                                    } else {
+                                                        echo $bioInfo;
+                                                    }?>" class="bio-update form-control">
     <input type="text" name="check" value="" style="display:none;">
     <input type="submit" name="update-form-submit" class="form-control">
     </form>

@@ -13,7 +13,8 @@ if(isset($_POST['change-password-submit'])){
     if(empty($oldpwd) || empty($newpwd) || empty($confirmnewpwd)){
         header("Location: ../changePassword.php?error=emptyFields");
         exit();
-    } elseif($newpwd !== $confirmnewpwd) {
+    } 
+    elseif($newpwd !== $confirmnewpwd) {
         header("Location: ../changePassword.php?error=passwordcheck");
         exit();
     }
