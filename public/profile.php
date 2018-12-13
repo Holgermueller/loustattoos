@@ -55,6 +55,12 @@
                 <a href="delete.php"><button class="delete">Delete Acct</button></a>
             </div>
 
+            <section>
+        <a href="userActivation.php">
+        <button>Activate</button>
+        </a>
+        </section>
+
         </section>
 
         <section class="book-list">
