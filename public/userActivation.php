@@ -1,4 +1,6 @@
-<?php include "templates/header.php"; ?>
+<?php include "templates/header.php"; 
+require 'includes/common.inc.php';
+?>
 
 <main class="main">
 
@@ -6,6 +8,7 @@
 <h3>Enter and submit your activation code below!</h3>
 
 <form action="includes/activation.inc.php" class="activation-form">
+    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>"/>
     <input type="text" name="activation-input" class="form-control" placeholder="Activation Code">
     <input type="text" name="check" value="" style="display:none;">
     <input type="submit" name="activate-submit" value="Submit" class="form-control">

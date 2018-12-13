@@ -31,6 +31,7 @@
             echo '<div class="login-register">
                 <div>
                 <form action="includes/login.inc.php" method="post">
+                <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>
                 <input type="text" name="usernameoremail" placeholder="Username or E-Mail" class="form-control">
                 <input type="password" name="userpassword" placeholder="Password" class="form-control">
                 <input type="text" name="check" value="" style="display:none;">
@@ -43,6 +44,7 @@
                 <button name="register" class="register form-control">Register</button>
                 </a>
         </div>
+        <a href="forgotPassword.php">Forgot password?</a>
         </div>';
             
         } else {

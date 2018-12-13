@@ -1,4 +1,6 @@
-<?php include "templates/header.php"; ?>
+<?php include "templates/header.php"; 
+require 'includes/common.inc.php';
+?>
 
     <main>
 
@@ -66,7 +68,8 @@
         <section class="book-list">
             <div class="book-entry-form">
                 <h3>Add a book:</h3>
-                <form action="">
+                <form action="" method="post" class="book-entry-form">
+                    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>"/>
                     <input type="text" placeholder="Title...">
                     <input type="text" name="check" value="" style="display:none;">
                     <input type="submit">
