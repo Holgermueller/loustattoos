@@ -6,7 +6,7 @@ require 'includes/common.inc.php';
 <main class="main">
     <h1>Edit Profile</h1>
 
-    <form action="includes/update.inc.php" class="edit-profile" method="post">
+    <form action="includes/update.inc.php" class="edit-profile" method="post" name="updateform">
     <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>"/>
     <input type="text" name="newfirst" class="form-control" value="<?php echo $_SESSION['firstname']?>">
     <input type="text" name="newlast" class="form-control" value="<?php echo $_SESSION['lastname']?>">
@@ -19,13 +19,13 @@ require 'includes/common.inc.php';
                                                                         } else {
                                                                             echo $locationDisplay;
                                                                         }?>">
-    <input type="text" name="newbio" id=""  value="<?php
+    <textarea type="text" name="newbio" id="updateform"  value="<?php
                                                     $bioInfo = $_SESSION['bio'];
                                                     if(empty($bioInfo)){
                                                         echo 'Enter bio';
                                                     } else {
                                                         echo $bioInfo;
-                                                    }?>" class="bio-update form-control">
+                                                    }?>" class="bio-update form-control"></textarea>
     <input type="text" name="check" value="" style="display:none;">
     <input type="submit" name="update-form-submit" class="form-control">
     </form>
