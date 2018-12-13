@@ -31,7 +31,7 @@
             echo '<div class="login-register">
                 <div>
                 <form action="includes/login.inc.php" method="post">
-                <input type="text" name="username" placeholder="Username or E-Mail" class="form-control">
+                <input type="text" name="usernameoremail" placeholder="Username or E-Mail" class="form-control">
                 <input type="password" name="userpassword" placeholder="Password" class="form-control">
                 <input type="text" name="check" value="" style="display:none;">
                 <input type="submit" name="login-submit" value="Log In" class="login form-control">
