@@ -155,6 +155,15 @@ input[type=submit] {
     background-color: @primary-background-color;
 }
 
+.book-entry-button {
+    border-radius: 15px;
+    margin: 0 2px 0 2px;
+}
+
+.book-entry-button:hover {
+    background-color: @hover;
+}
+
 // Edit/Update Profile
 .edit-profile {
     .registration;
@@ -232,4 +241,55 @@ input[type=submit] {
 // Forgot password page
 .forgot-password-form {
     .registration;
+}
+
+// Book entry page
+.book-entry-form {
+    .registration;
+}
+
+.return:hover,
+.book-submit:hover {
+    background-color: @hover;
+}
+
+.return {
+    border-radius: 15px;
+    margin: 0 2px 0 2px;
+}
+
+// Book Entry star rating
+.hide {
+    display: none;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.rating {
+    padding: 7px;
+}
+
+.rating > label {
+    position: relative;
+    cursor: pointer;
+    color: #000;
+}
+
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: transparent;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > input.radio-btn:checked ~ label:before,
+.rating > input.radio-btn:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
 }

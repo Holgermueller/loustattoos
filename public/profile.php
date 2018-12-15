@@ -58,16 +58,12 @@ require 'includes/common.inc.php';
         </section>
 
         <section class="book-list">
+        <h2>My book list:</h2>
+        <hr>
             <div class="book-entry-form">
-                <h3>Add a book:</h3>
-                <form action="" method="post" class="book-entry-form">
-                    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>"/>
-                    <input type="text" placeholder="Title...">
-                    <input type="text" name="check" value="" style="display:none;">
-                    <input type="submit">
-                </form>
+                <a href="bookEntryForm.php"><button class="book-entry-button"><h3>Add a book!</h3></button></a>
             </div>
-
+            <hr>
             <h2>My books:</h2>
             <div class="book-list-display">
                 <h4>Books go here...</h4>
