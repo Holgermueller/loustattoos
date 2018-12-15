@@ -14,16 +14,7 @@ require 'includes/common.inc.php';
             <div class="profile-photo">
                 <i class="fas fa-user-circle"></i>
             </div>
-
-        <?php
-        if(isset($_SESSION['user_id'])){
-            echo'Welcome, '. $_SESSION['firstname'] . " " . $_SESSION['lastname'];
-        } else {
-            echo '<p>You are logged out.</p>';
-        }
-
-        ?>
-
+<hr>
             <div class="bio">
                 <h4>About me:</h4>
                 <h5>Location:
@@ -54,6 +45,7 @@ require 'includes/common.inc.php';
 
             <div class="update-links">
                 <a href="update.php"><button name="update" class="editacct">Edit Acct</button></a>
+                <hr>
                 <a href="delete.php"><button class="delete">Delete Acct</button></a>
             </div>
 

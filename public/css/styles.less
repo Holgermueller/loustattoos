@@ -162,15 +162,6 @@ input[type=submit] {
 
 .bio-update {
     border-radius: 15px;
-}
-
-// .bio-update {
-//     height: 15%;
-// }
-
-.change-password-button {
-    margin: 15% 12% 0 0;
-    border-radius: 15px;
     border-width: 2px;
     border-style: inset;
     border-color: initial;
@@ -179,11 +170,18 @@ input[type=submit] {
     resize: none;
 }
 
+.cancel-update-button,
+.change-password-button {
+    border-radius: 15px;
+}
+
+.update-form-submit:hover,
+.cancel-update-button:hover,
 .change-password-button:hover {
     background-color: @hover;
 }
 
-// Change password
+// Change password page
 .change-password-form {
     .registration;
 }

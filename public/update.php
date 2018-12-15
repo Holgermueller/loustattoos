@@ -25,9 +25,9 @@ require 'includes/common.inc.php';
                                                         echo 'Enter bio';
                                                     } else {
                                                         echo $bioInfo;
-                                                    }?> </textarea>
+                                                    }?></textarea>
     <input type="text" name="check" value="" style="display:none;">
-    <input type="submit" name="update-form-submit" class="form-control">
+    <input type="submit" name="update-form-submit" class="update-form-submit form-control">
     </form>
 
     <hr>
