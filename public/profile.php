@@ -68,6 +68,7 @@ require 'includes/common.inc.php';
             <div class="book-list-display">
                 <h4>Books go here...</h4>
             </div>
+            <a href="singleBook.php"><button>singlebook</button></a>
         </section>
 
     </main>
