@@ -49,6 +49,9 @@
             
         } else {
             echo '<div>
+            <a href="profile.php">
+                <button name="register" class="register form-control">Profile</button>
+                </a>
             <form action="includes/logout.inc.php" method="post">
                 <input type="text" name="check" value="" style="display:none;">
                 <input type="submit" name="logout-submit" value="Log Out" class="logout form-control">
