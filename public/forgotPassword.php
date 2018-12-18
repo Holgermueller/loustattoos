@@ -12,9 +12,16 @@ require 'includes/common.inc.php';
     if(isset($_GET['error'])) {
         if($_GET['error'] == "emptyfields") {
             echo "<p>All fields must be filled out.</p>";
-        } elseif($_GET["retrieval"] == "success"){
-            echo '<p>Retrieval successful!!</p>';
+        } elseif($_GET['error'] == "invalidemailandusername"){
+            echo '<p>Invalid username and email.</p>';
+        } elseif($_GET['error'] == 'invalidemail') {
+            echo "<p>Invalid email.</p>";
+        } else if ($_GET['error'] == 'invalidusername') {
+            echo "<p>Invalid username.</p>";
         }
+            
+    } else if ($_GET["retrieval"] == "success") {
+        echo '<p>Retrieval successful!!</p>';
     }
     ?>
 
