@@ -28,7 +28,7 @@ require 'includes/common.inc.php';
     </form>
 
     <hr>
-    <a href="profile.php"><button class="return form-control">Back to profile</button></a>
+    <a href="profile.php"><button class="return form-control">Cancel</button></a>
 </main>
 
 <?php include "templates/footer.php"; ?>

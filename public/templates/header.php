@@ -25,7 +25,6 @@
         </a>
     </section>
 
-    <section class="login-logout-forms">
         <?php
         if(!isset($_SESSION['user_id'])){
             echo '<div class="login-register">
@@ -37,6 +36,7 @@
                 <input type="text" name="check" value="" style="display:none;">
                 <input type="submit" name="login-submit" value="Log In" class="login form-control">
                 </form>
+                <a href="forgotPassword.php" class="forgot-password-link">Forgot password?</a>
             </div>
             
             <div class="register-button">
@@ -44,11 +44,10 @@
                 <button name="register" class="register form-control">Register</button>
                 </a>
         </div>
-        <a href="forgotPassword.php">Forgot password?</a>
         </div>';
             
         } else {
-            echo '<div>
+            echo '<div class="nav-buttons">
             <a href="profile.php">
                 <button name="register" class="register form-control">Profile</button>
                 </a>
@@ -59,7 +58,6 @@
         </div>';
         }
         ?>
-    </section>
 </header>
     
 </body>
