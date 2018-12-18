@@ -33,7 +33,6 @@ require 'includes/common.inc.php';
     }elseif($_GET["signup"] == "success"){
         echo '<p>Signup successful!!</p>';
     }
-
     ?>
     </h2>
 

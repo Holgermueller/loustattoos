@@ -5,6 +5,21 @@ require 'includes/common.inc.php';
 <main class="main">
     <h2>Fill out the form below</h2>
     <h2>to retrieve your password.</h2>
+
+    <h2 class="error">
+
+    <?php
+    if(isset($_GET['error'])) {
+        if($_GET['error'] == "emptyfields") {
+            echo "<p>All fields must be filled out.</p>";
+        } elseif($_GET["retrieval"] == "success"){
+            echo '<p>Retrieval successful!!</p>';
+        }
+    }
+    ?>
+
+    </h2>
+
     <form action="includes/forgotPassword.inc.php" method="post" class="forgot-password-form">
     <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>"/>
     <input type="text" name="forgot-password-username" class="form-control" placeholder="Enter Username">

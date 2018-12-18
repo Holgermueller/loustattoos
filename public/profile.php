@@ -9,7 +9,7 @@ require 'includes/common.inc.php';
                 echo '<p class="success">Update successful!</p>';
             };?>
         
-        <h2>Welcome, <?php  echo $_SESSION['firstname'];?></h2>
+        <h2>Welcome, <?php  echo $_SESSION['username'];?></h2>
 
             <div class="profile-photo">
                 <i class="fas fa-user-circle"></i>
@@ -17,6 +17,7 @@ require 'includes/common.inc.php';
 <hr>
             <div class="bio">
                 <h4>About me:</h4>
+                <h5>Full name: <?php echo $_SESSION['firstname'] . ' ' . $_SESSION['lastname'];?></h5>
                 <h5>Location:
                     <?php
 
