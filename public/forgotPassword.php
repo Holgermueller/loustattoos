@@ -31,6 +31,7 @@ require 'includes/common.inc.php';
     <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>"/>
     <input type="text" name="forgot-password-username" class="form-control" placeholder="Enter Username">
     <input type="email" name="forgot-password-email" class="form-control" placeholder="Enter E-mail">
+    <input type="text" name="check" value="" style="display:none;">
     <input type="submit" name="forgot-password-submit" class="form-control" value="Submit">
     </form>
 
