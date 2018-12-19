@@ -7,6 +7,12 @@ if(isset($_POST['forgot-password-submit'])) {
     $username = $_POST['forgot-password-username'];
     $email = $_POST['forgot-password-email'];
 
+    $selectorToken = bin2hex(random_bytes(8));
+
+    $authenticatorToken = random_bytes(32);
+
+    //$url = ;
+
     if(empty($username) || empty($email)) {
         header("Location: ../forgotPassword.php?error=emptyfields");
         exit();
