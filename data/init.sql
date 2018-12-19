@@ -14,7 +14,8 @@ CREATE TABLE users (
     active BOOLEAN DEFAULT false,
     userlocation VARCHAR(50),
     bio TEXT,
-    datejoined datetime DEFAULT CURRENT_TIMESTAMP
+    datejoined datetime DEFAULT CURRENT_TIMESTAMP,
+    ALTER TABLE users ADD forgotten_password_token VARCHAR(50) NOT NULL;
 );
 
 CREATE TABLE usersbooks (
