@@ -11,7 +11,9 @@ if(isset($_POST['forgot-password-submit'])) {
 
     $authenticatorToken = random_bytes(32);
 
-    //$url = ;
+    $url = "www.readit-mysqli/forgotPassword/changePassword.php?selectorToken=" . $selectorToken . "&authenticatorToken=" . bin2hex($authenticatorToken);
+
+    $expires = date("U") + 1800;
 
     if(empty($username) || empty($email)) {
         header("Location: ../forgotPassword.php?error=emptyfields");
