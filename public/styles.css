@@ -1,0 +1,18 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: "Pacifico";
+  border: 2px solid black;
+  border-radius: 15px;
+  width: max-content;
+  padding: 8px;
+  margin: auto;
+}
+h1 {
+  padding: 0;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "loustattoos",
+  "version": "1.0.0",
+  "description": "Practice using php and mysqli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holgermueller/loustattoos.git"
+  },
+  "author": "Holger Mueller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Holgermueller/loustattoos/issues"
+  },
+  "homepage": "https://github.com/Holgermueller/loustattoos#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0"
+  }
+}

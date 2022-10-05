@@ -1,2 +1,3 @@
-# readit-mysqli
-Practice using php and mysqli
+# Lou's Tattoos
+
+Your neighborhood tattoo parlor
