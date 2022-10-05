@@ -1,18 +1,50 @@
+:root {
+  --main-font-color: HSL(114, 96.1%, 59.6%);
+  --secondary-font-color: #f8f8ff;
+  --main-background-color: #3d3d3d;
+  --secondary-background-color: #0a0a0a;
+}
+
 body,
 html {
   padding: 0;
   margin: 0;
+  background-color: var(--main-background-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-background-color);
+  color: var(--main-font-color);
+  padding: 12px;
+}
+
+.header > div {
+  font-size: 1.5rem;
+}
+
+.header:nth-child(3) {
+  text-align: right;
+}
+.header:nth-child(4) {
+  text-align: right;
 }
 
 .logo {
-  font-size: 2rem;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
   font-family: "Pacifico";
-  border: 2px solid black;
+  border: 4px solid var(--main-font-color);
+  color: var(--main-font-color);
   border-radius: 15px;
-  width: max-content;
   padding: 8px;
   margin: auto;
-}
-h1 {
-  padding: 0;
+  width: max-content;
 }
