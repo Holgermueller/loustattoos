@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="public/styles.css" />
@@ -15,19 +15,65 @@
   </head>
   <body>
     <header class="header">
-      <div>about</div>
+      <div>About</div>
       <div>Gallery</div>
 
-      <div>contact</div>
-      <div>find us</div>
+      <div>Contact</div>
+      <div>Location</div>
     </header>
+
     <div class="logo">
       <h1>Lou's Tattoos</h1>
     </div>
-    <div class="hero">hero</div>
-    <div class="gallery">gallery</div>
-    <div class="contact">contact form here</div>
 
-    <div class="location">map goes here</div>
+    <section class="hero">
+      <div class="slideshow-container">
+        <div class="my-slides fade">
+          <img
+            height="500px"
+            width="100%"
+            src="images/forearms.png"
+            alt="tattooed forearms"
+          />
+        </div>
+        <div class="my-slides fade">
+          <img
+            height="500px"
+            width="100%"
+            src="images/tattoogun.png"
+            alt="tattoo gun in action"
+          />
+        </div>
+        <div class="my-slides fade">
+          <img
+            height="500px"
+            width="100%"
+            src="images/othertattoogun.png"
+            alt="another tattoo gun in action"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)"><</a>
+        <a class="next" onclick="plusSlides(1)">></a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <p>A family-friendly tattoo parlor.</p>
+    </section>
+    <section id="gallery" class="gallery">
+      <h2>Check out some of our previous work:</h2>
+    </section>
+    <section id="contact" class="contact">contact form here</section>
+
+    <section id="location" class="location">map goes here</section>
+
+    <script src="public/index.js"></script>
   </body>
 </html>
