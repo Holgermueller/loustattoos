@@ -130,11 +130,73 @@ h1 {
   }
 }
 
+section {
+  margin: 5% auto;
+}
+
 .about-section,
 .gallery,
-.section-header {
+.section-header,
+.contact,
+.location {
   font-family: var(--secondary-font);
   color: var(--secondary-font-color);
   text-align: center;
   font-size: 2rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  width: 75%;
+  margin: auto;
+}
+
+label {
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 2rem;
+}
+
+button {
+  border-radius: 15px;
+  font-size: 2rem;
+  width: 100%;
+  margin: 1rem auto;
+  background-color: var(--main-font-color);
+  color: var(--secondary-background-color);
+  padding: 8px 0;
+}
+
+.flex-left,
+.flex-right {
+  color: var(--secondary-font-color);
+  height: 35vh;
+  font-size: 1.5rem;
+  flex: 45%;
+  margin: auto;
+}
+
+.flex-right {
+  text-align: left;
+}
+
+footer {
+  background-color: var(--secondary-background-color);
+  color: var(--main-font-color);
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  bottom: 0;
+  left: 0;
+  margin-top: 8%;
 }
