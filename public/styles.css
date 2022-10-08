@@ -19,12 +19,19 @@ html {
   justify-content: space-between;
   background-color: var(--secondary-background-color);
   color: var(--main-font-color);
-  padding: 12px;
   font-family: var(--secondary-font);
+  top: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
-.header > div {
+.header > a {
   font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: 12px;
 }
 
 .header:nth-child(3) {
