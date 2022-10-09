@@ -152,6 +152,19 @@ section {
   font-size: 2rem;
 }
 
+#photosContainer {
+  width: 90%;
+  margin: auto;
+  line-height: 0;
+  column-count: 3;
+  column-gap: 0px;
+}
+
+#photosContainer img {
+  width: 100% !important;
+  height: auto !important;
+}
+
 form {
   width: 75%;
   margin: auto;
