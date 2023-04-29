@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Holgermueller/loustattoos#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.12",
-    "cssnano": "^5.1.13",
+    "cssnano": "^6.0.0",
     "postcss": "^8.4.17",
     "postcss-cli": "^10.0.0"
   }
