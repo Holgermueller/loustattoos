@@ -1,10 +1,3 @@
-const navHeight = document.getElementById("header").offsetHeight;
-
-document.documentElement.style.setProperty(
-  "--scroll-padding",
-  navHeight + "px"
-);
-
 let slideIndex = 1;
 
 const plusSlides = (n) => {
